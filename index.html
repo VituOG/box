@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Caixa - Loja de Tênis</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-shoe-prints"></i> Simulador de Caixa - Tênis legal</h1>
+        </header>
+        <div class="conteudo-principal">
+            <div class="formulario-produto">
+                <h2>Adicionar Produto</h2>
+                <form id="formularioProduto">
+                    <div class="grupo-formulario">
+                        <label for="marca">Marca:</label>
+                        <select id="marca" required>
+                            <option value="">Selecione a sua marca</option>
+                            <option value="Adidas">Adidas</option>
+                        </select>
+                    </div>
+                    <div class="grupo-formulario">
+                        <label for="modelo">Modelo:</label>
+                        <select id="modelo" required>
+                            <option value="">Selecione seu modelo</option>
+                            <option value="Adidas">AE1</option>
+                        </select>
+                    </div>
+                    <div class="grupo-formulario">
+                        <label for="tamanho">Numero</label>
+                        <select id="tamanho" required>
+                            <option value="">Selecione a numeração</option>
+                            <option value="40">40</option>
+                            <option value="41">41</option>
+                            <option value="42">42</option>
+                            <option value="43">43</option>
+                            <option value="44">44</option>
+                        </select>
+                    </div>
+                    <div class="grupo-formulario">
+                        <label for="preco">Valor (R$):</label>
+                        <input type="number" id="preco" required min="0" step="0.01">
+                    </div>
+                    <button type="submit" class="botao-adicionar">Adicionar Produto <i class="fas fa-plus"></i></button>
+                </form>
+            </div>
+
+            <div class="secao-carrinho">
+                <h2>Carrinho de Compras <i class="fas fa-shopping-cart"></i></h2>
+                <div id="itensCarrinho" class="itens-carrinho">
+                </div>
+                <div class="resumo-carrinho">
+                    <div class="item-resumo">
+                        <span>Subtotal:</span>
+                        <span id="subtotal">R$ 0,00</span>
+                    </div>
+                    <div class="item-resumo">
+                        <span>Frete:</span>
+                        <span id="frete">R$ 0,00</span>
+                    </div>
+                    <div class="item-resumo total">
+                        <span>Total:</span>
+                        <span id="total">R$ 0,00</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="secao-pagamento">
+                <h2>Pagamento <i class="fas fa-money-bill-wave"></i></h2>
+                <div class="grupo-formulario">
+                    <label for="valorPago">Valor Pago (R$):</label>
+                    <input type="number" id="valorPago" min="0" step="0.01">
+                </div>
+                <div class="info-troco">
+                    <span>Troco:</span>
+                    <span id="troco">R$ 0,00</span>
+                </div>
+                <button id="botaoLimpar" class="botao-limpar">Limpar Compra <i class="fas fa-trash"></i></button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
